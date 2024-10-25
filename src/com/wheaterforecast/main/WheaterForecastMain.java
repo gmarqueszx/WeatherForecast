@@ -15,5 +15,7 @@ public class WheaterForecastMain {
 
         CheckWheater checkWheater = new CheckWheater();
         WheaterData wheaterData = checkWheater.checkWheater(name);
+
+        System.out.println(wheaterData.toString());
     }
 }

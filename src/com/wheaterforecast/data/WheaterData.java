@@ -12,19 +12,27 @@ import lombok.Setter;
 @NoArgsConstructor
 public class WheaterData {
     private String name;
-    private double temp;
-    private double temp_min;
-    private double temp_max;
-    private double humidity;
+    private Main main;
 
     @Override
     public String toString() {
         return "WheaterData{" +
                 "name='" + name + '\'' +
-                ", temp=" + temp +
-                ", temp_min=" + temp_min +
-                ", temp_max=" + temp_max +
-                ", humidity=" + humidity +
+                ", temp=" + main.temp +
+                ", temp_min=" + main.temp_min +
+                ", temp_max=" + main.temp_max +
+                ", humidity=" + main.humidity +
                 '}';
+    }
+
+    @Setter
+    @Getter
+    @AllArgsConstructor
+    @NoArgsConstructor
+    public static class Main {
+        private double temp;
+        private double temp_min;
+        private double temp_max;
+        private double humidity;
     }
 }
